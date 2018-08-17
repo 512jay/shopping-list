@@ -36,11 +36,11 @@ function addListAfterKeypress(event) {
 // clicking on a list item toggles the strikethrough
 // clicking on the Delete button will remove the element
 function processClick(event) {
-	if(event.srcElement.firstElementChild !== null) //button has no child
+	if(event.target.firstElementChild !== null) //button has no child
   {
-	event.srcElement.classList.toggle("done");
+	event.target.classList.toggle("done");
   } else {
-  	deleteListItem(event.srcElement.parentNode);//Send node to delete
+  	deleteListItem(event.target.parentNode);//Send node to delete
   }
 }
 
